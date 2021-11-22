@@ -27,7 +27,7 @@ const getWeatherDataFromApi = async () => {
     const cityListItems = list.querySelectorAll(".city");
     const cityListItemArray = Array.from(cityListItems);
     console.log(cityListItemArray);
-    
+
     if (cityListItemArray.length > 0) {
       const filteredArray = cityListItemArray.filter(card => card.querySelector(".city-name span").innerText == name);
       if (filteredArray.length > 0) {
@@ -58,10 +58,7 @@ const getWeatherDataFromApi = async () => {
     createdCityCardLi.innerHTML = createdCityCardLiInnerH;
     list.appendChild(createdCityCardLi);
 
-    msg.innerText = "";
-    // form.reset() ==> input.value = "";
-    form.reset();
-    input.focus();
+    
   }
   catch (error) {
     msg.innerText = error;
